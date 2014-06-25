@@ -24,7 +24,8 @@
     
     self.isAlive = newState;
     
-    self.visible = self.isAlive;
+    self.visible = _isAlive;
+    
 }
 
 @end
