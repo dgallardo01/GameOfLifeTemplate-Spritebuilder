@@ -18,4 +18,6 @@
 
 - (id)initCreature;
 
+- (void)setIsAlive:(BOOL)newState;
+
 @end
