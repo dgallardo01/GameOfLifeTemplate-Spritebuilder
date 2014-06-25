@@ -50,12 +50,9 @@ static const NSInteger GRID_COLUMNS = 10;
             creature.anchorPoint = ccp(0, 0);
             creature.position = ccp(x, y);
             [self addChild:creature];
-        
-        //this is shotrhand to access an array inside an array
-        _gridArray[i][j] = creature;
             
-        //make creature visible to test this method, remove this once we know we have filled the grid properly
-            creature.isAlive = YES;
+            //this is shotrhand to access an array inside an array
+            _gridArray[i][j] = creature;
             
             x+= _cellWidth;
         }
