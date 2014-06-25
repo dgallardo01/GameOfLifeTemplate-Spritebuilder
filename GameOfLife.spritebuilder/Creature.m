@@ -22,7 +22,7 @@
 
 - (void)setIsAlive:(BOOL)newState{
     
-    self.isAlive = newState;
+    _isAlive = newState;
     
     self.visible = _isAlive;
     
