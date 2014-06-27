@@ -130,6 +130,7 @@ static const NSInteger GRID_COLUMNS = 10;
     if(x <0 || y < 0 || x >= GRID_ROWS || y >= GRID_COLUMNS){
         isIndexValid = NO;
     }
+    
     return isIndexValid;
 }
 
