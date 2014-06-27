@@ -134,6 +134,8 @@ static const NSInteger GRID_COLUMNS = 10;
 }
 
 - (void)updateCreatures{
+    NSInteger numAlive = 0;
+    
     //iterate through the rows
     for (NSInteger i=0; i<[_gridArray count]; i++) {
         //iterate through all of the columns for a given row
@@ -141,12 +143,14 @@ static const NSInteger GRID_COLUMNS = 10;
             Creature *currentCreature = _gridArray[i][j];
             if(currentCreature.livingNeighbors == 3){
                 currentCreature.isAlive = YES;
+                numAlive +=1;
             }
             else if(currentCreature.livingNeighbors <=1 || currentCreature.livingNeighbors >=4){
                 currentCreature.isAlive = NO;
             }
         }
     }
+    _totalAlive = numAlive;
 }
 
 @end
