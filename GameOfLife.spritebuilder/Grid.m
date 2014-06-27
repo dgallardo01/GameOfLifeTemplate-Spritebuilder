@@ -133,5 +133,20 @@ static const NSInteger GRID_COLUMNS = 10;
     return isIndexValid;
 }
 
+- (void)updateCreatures{
+    //iterate through the rows
+    for (NSInteger i=0; i<[_gridArray count]; i++) {
+        //iterate through all of the columns for a given row
+        for (NSInteger j=0; j< [_gridArray[i] count]; j++) {
+            Creature *currentCreature = _gridArray[i][j];
+            if(currentCreature.livingNeighbors == 3){
+                currentCreature.isAlive = YES;
+            }
+            else if(currentCreature.livingNeighbors <=1 || currentCreature.livingNeighbors >=4){
+                currentCreature.isAlive = NO;
+            }
+        }
+    }
+}
 
 @end
