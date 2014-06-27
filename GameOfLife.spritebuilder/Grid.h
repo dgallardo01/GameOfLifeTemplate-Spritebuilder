@@ -13,4 +13,8 @@
 @property (nonatomic, assign) NSInteger totalAlive;
 @property (nonatomic, assign) NSInteger generation;
 
+- (void)evolveStep;
+- (void)countNeighbors;
+- (void)updateCreatures;
+
 @end
